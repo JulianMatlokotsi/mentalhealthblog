@@ -121,17 +121,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SITE_ID = 1
 
-# Add authentication backends
+
 AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-# Configure allauth settings
-ACCOUNT_EMAIL_VERIFICATION = 'none'  # For development purposes
+ACCOUNT_EMAIL_VERIFICATION = 'none'  
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
-ACCOUNT_USERNAME_REQUIRED = False  # Allow email login
-LOGIN_REDIRECT_URL = 'post_list'  # Redirect to post list after login
-LOGOUT_REDIRECT_URL = 'post_list'  # Redirect to post list after logout
+ACCOUNT_USERNAME_REQUIRED = False  
+LOGIN_REDIRECT_URL = 'post_list'  
+LOGOUT_REDIRECT_URL = 'post_list'  
 
 
 LOGIN_URL = 'account_login'  
