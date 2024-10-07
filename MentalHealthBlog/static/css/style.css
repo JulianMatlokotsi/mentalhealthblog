@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-color: #f8f9fa;
+    color: #343a40;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    color: #007bff;
+    margin-bottom: 15px; 
+}
+
+h1.text-center {
+    background-color: #007BFF; /* Blue background */
+    color: white;              /* White text */
+    padding: 20px;             /* Add some padding */
+    border-radius: 5px;        /* Slightly round the corners */
+    text-align: center;        /* Ensure the text stays centered */
+}
+
+p {
+    margin-bottom: 10px; 
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center; 
+}
+
+.nav-link {
+    color: #007bff;
+}
+
+.nav-link:hover {
+    color: #0056b3;
+}
+
+.post {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.comment {
+    border-left: 2px solid #007bff;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .post {
+        padding: 10px;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+.login-form {
+    max-width: 400px; /* Set a maximum width for the form */
+    margin: auto; /* Center the form */
+    padding: 20px; /* Add padding */
+    border: 1px solid #007BFF; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f8f9fa; /* Light background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.login-form h2 {
+    color: #007BFF; /* Title color */
+}
+
+.login-form .form-group label {
+    color: #333; /* Label color */
+}
+
+.login-form .btn-primary {
+    background-color: #007BFF; /* Primary button color */
+    border-color: #007BFF; /* Border color for button */
+}
+
+.login-form .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.container {
+    background-color: #f8f9fa; /* Light background for the container */
+    padding: 30px; /* Add padding to the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h2 {
+    color: #dc3545; /* Color for the heading */
+}
+
+.alert {
+    font-weight: bold; /* Make alert text bold */
+    font-size: 1.2rem; /* Slightly larger text for the alert */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Danger button color */
+    border: none; /* Remove border */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Secondary button color */
+    border: none; /* Remove border */
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+}
+

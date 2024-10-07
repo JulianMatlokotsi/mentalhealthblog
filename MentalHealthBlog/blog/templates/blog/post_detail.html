@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<h2>{{ post.title }}</h2>
+<p><small>By {{ post.author }} on {{ post.created_at }}</small></p>
+<p>{{ post.content }}</p>
+
+<h3>Comments</h3>
+{% for comment in comments %}
+    <div class="comment">
+        <p><strong>{{ comment.author }}:</strong> {{ comment.content }}</p>
+        <p><small>{{ comment.created_at }}</small></p>
+    </div>
+{% empty %}
+    <p>No comments yet.</p>
+{% endfor %}
+
+<h4>Add a Comment</h4>
+<form method="post">
+    {% csrf_token %}
+    {{ comment_form.as_p }}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<a href="{% url 'post_list' %}" class="btn btn-secondary">Back to Posts</a>
+{% endblock %}
+
+       

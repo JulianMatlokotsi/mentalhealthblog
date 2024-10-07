@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<h1>{{ profile.user.username }}</h1>
+<p>Location: {{ profile.location }}</p>
+<p>{{ profile.bio }}</p>
+
+<h2>Posts by {{ profile.user.username }}</h2>
+<ul>
+    {% for post in posts %}
+        <li><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></li>
+    {% empty %}
+        <li>No posts available.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
