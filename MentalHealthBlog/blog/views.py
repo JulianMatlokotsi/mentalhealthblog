@@ -10,7 +10,7 @@ from django.contrib import messages
 def user_profile(request, username):
     user = get_object_or_404(User, username=username)
     profile = UserProfile.objects.get(user=user)
-    posts = user.blog_posts.all()  # Assuming you have a related_name set on the ForeignKey in your Post model
+    posts = user.blog_posts.all()  your Post model
     return render(request, 'blog/user_profile.html', {'profile': profile, 'posts': posts})
 
 def post_list(request):
@@ -65,9 +65,9 @@ def login_view(request):
         
         if user is not None:
             login(request, user)
-            return redirect('post_list')  # Redirect to the post list or another page after login
+            return redirect('post_list')  
         else:
-            messages.error(request, 'Invalid username or password.')  # Show error message if login fails
+            messages.error(request, 'Invalid username or password.')  
             
     return render(request, 'blog/login.html')
 
